@@ -1,0 +1,129 @@
+header {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ECF0F3;
+  z-index: 1000;
+  color: #3c3e41;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  .header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @media (min-width: 991px) {
+      justify-content: flex-start;
+    }
+  }
+  
+  .logo{
+    padding: 20px;
+    font-size: 20px;
+    padding-left: 0;
+
+    @media (min-width: 991px) {
+      margin-right: 125px;
+    }
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ECF0F3;
+    display: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    
+    @media (min-width: 991px) {
+      position: static;
+      display: initial;
+      box-shadow: none;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        width: 100%;
+        position: relative;
+        float: left;
+
+        @media (min-width: 991px) {
+          width: auto;
+        }        
+
+        &:focus-within > ul,
+        &:hover > ul {
+          display: block;
+        }
+
+        a {
+          display: block;
+          font-size: 20px;
+          padding: 20px;
+          color: #333;
+          
+          @media (min-width: 991px) {
+            display: inline-block;
+          }
+
+          &:hover {
+            background-color: #333;
+            color: #fff;
+          }
+        }
+
+        ul {
+          position: relative;
+          left: 0;
+          background-color: #fff;
+          width: 100%;
+          display: none;
+          
+          @media (min-width: 991px) {
+            width: 200px;
+            position: absolute;
+          }
+
+          li {
+            width: 100%;
+            border-top: 1px solid #333;
+            background-color: #eee;
+
+            @media (min-width: 991px) {
+              background-color: #fff;
+            }
+
+            a {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #menu-bar{
+    display: none;
+    
+    &:checked ~ .navbar{
+      display: initial;
+    }
+  }
+  
+  label{
+    font-size: 20px;
+    color: #333;
+    padding: 20px;
+    padding-right: 0;
+    cursor: pointer;
+    display: initial;
+    
+    @media (min-width:991px) {
+      display: none;    
+    }
+  }
+}

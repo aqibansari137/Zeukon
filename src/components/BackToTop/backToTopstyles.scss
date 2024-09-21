@@ -1,0 +1,36 @@
+.back-to-top{  
+  &.hide{
+    display: none;
+  }
+
+  &>div{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 10px #0000001a;
+  }
+
+  i{
+    font-size: 40px;
+    position: relative;
+    top: 4px;
+    z-index: 1;
+  }
+
+  &:hover{
+    &>div{
+      background-color: #3c3e41;
+    }
+
+    i{
+      color: #eee;
+    }
+  }
+}

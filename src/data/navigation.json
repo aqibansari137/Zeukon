@@ -1,0 +1,20 @@
+{
+    "menusLinks":[
+        {
+            "title":"Home",
+            "href":"/"
+        },
+        {
+            "title":"Feature",
+            "href":"#what-i-do"
+        },
+        {
+            "title":"Portfolio",
+            "href":"/portfolio"
+        },
+        {
+            "title":"Contact Us",
+            "href":"#contact-me"
+        }
+    ]
+}

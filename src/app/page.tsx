@@ -1,95 +1,70 @@
+import "@/styles/homepage.scss";
 import Image from "next/image";
-import styles from "./page.module.css";
+import { Cards } from "@/components/Cards/Cards";
+import { BackToTop } from "@/components/BackToTop/BackToTop";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className="homepage">
+      <div className="home-section main-container" id="home">
+        <div className="left-col">
+          <div className="inner">
+            <span className="subtitle">WELCOME TO MY WORLD</span>
+            <h1 className="title">
+              Hi, I’m <span>Jone Lee a Developer</span>
+            </h1>
+            <div>
+              <p className="description">
+                I use animation as a third dimension by which to simplify
+                experiences and kuiding thro each and every interaction. I’m not
+                adding motion just to spruce things up, but doing it in ways
+                that.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="right-col">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            alt="Homepage banner"
+            width="451"
+            height="619"
+            src="/images/homepage-banner.png"
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
+      <div className="divider"></div>
+      <div className="what-i-do-section main-container" id="what-i-do">
+        <h2>What I Do</h2>
+        <Cards />
+      </div>
+      <div className="divider"></div>
+      <div className="contact-us-section main-container" id="contact-me">
+        <h2>Contact Me</h2>
+        <div className="contact-items">
+          <div className="col">
+            <div className="icon-content">
+              <i className="bi bi-geo-alt-fill"></i>
+            </div>
+            <h3>Address</h3>
+            <p>Kolkata</p>
+          </div>
+          <div className="col">
+            <div className="icon-content">
+              <i className="bi bi-telephone-fill"></i>
+            </div>
+            <h3>Contact Number</h3>
+            <a href="tel://1234567920">+91 1234567890</a>
+          </div>
+          <div className="col">
+            <div className="icon-content">
+              <i className="bi bi-send-fill"></i>
+            </div>
+            <h3>Email Address</h3>
+            <a href="mailto:something@gmail.com">something@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <BackToTop />
     </div>
   );
 }
